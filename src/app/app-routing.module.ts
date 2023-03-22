@@ -8,10 +8,10 @@ const routes: Routes = [
     path: '',
     component: ContainerComponent,
     children: [
-      // {
-      //   path: '',
-      //   loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule)
-      // }
+      {
+        path: '',
+        loadChildren: () => import('./modules/field/field.module').then(m => m.FieldModule)
+      }
     ]
   },
   { path: '404', component: NotFoundComponent },

@@ -5,13 +5,14 @@ import { RouterModule } from '@angular/router';
 import { MaterialModule } from './material/material.module';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { CoordinatesPipe } from './pipes/coordinates.pipe';
 
 
 @NgModule({
   declarations: [
     NotFoundComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    CoordinatesPipe
   ],
   imports: [
     CommonModule,
@@ -22,7 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   exports: [
     MaterialModule,
     SpinnerComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    CoordinatesPipe
   ]
 })
 export class SharedModule { }

@@ -7,7 +7,7 @@ export class SpinnerService {
 
   private visible = false;
 
-  isVisible(): boolean {
+  get isVisible(): boolean {
     return this.visible;
   }
 

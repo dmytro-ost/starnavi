@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="col">
+    <app-field-mode-selector
+      [modes]="(modes$ | async) || []"
+      (start)="onStart($event)">
+    </app-field-mode-selector>
+    <div class="field" (mouseover)="onMouseOver($event)">
+      <div class="square"
+        *ngFor="let cell of field; index as i; trackBy: trackByFn"
+        [class.filled]="cell"
+        [id]="i">
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="list">
+      <app-field-list
+        [field]="field"
+        [sideSize]="fieldSize">
+      </app-field-list>
+    </div>
+  </div>
+</div>

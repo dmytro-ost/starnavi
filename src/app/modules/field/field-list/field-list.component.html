@@ -1,0 +1,6 @@
+<ng-container *ngIf="field.length > 0">
+  <h2 class="header">Hover squares</h2>
+  <ng-container *ngFor="let item of field; index as i; trackBy: trackByFn">
+    <div *ngIf="item" class="item">{{i | coordinates : sideSize}}</div>
+  </ng-container>
+</ng-container>

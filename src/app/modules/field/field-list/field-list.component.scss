@@ -1,0 +1,12 @@
+@import '/src/scss/colors.scss';
+
+.header {
+  margin: 10px 0;
+  font-size: 30px;
+}
+
+.item {
+  background-color: $list-item-bg;
+  padding: 10px;
+  margin-bottom: 2px;
+}
