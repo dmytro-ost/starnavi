@@ -10,8 +10,8 @@ import { FieldService } from 'src/app/services/field.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FieldComponent implements OnInit, OnDestroy {
-  @HostBinding('style.--cells-column')
-  column!: string;
+  @HostBinding('style.--col-size')
+  column!: number;
   fieldSize!: number;
   field!: boolean[];
   modes$: Observable<Mode[]> = this.fieldService.loadModes();
@@ -47,6 +47,6 @@ export class FieldComponent implements OnInit, OnDestroy {
   }
 
   private setColumnVar(fieldSize: number) {
-    this.column = fieldSize + 'px';
+    this.column = fieldSize;
   }
 }

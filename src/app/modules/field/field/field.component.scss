@@ -13,12 +13,12 @@
 .field {
   display: flex;
   flex-wrap: wrap;
-  width: calc($cell-width * var(--cells-column));
+  width: calc($cell-width * var(--col-size));
 }
 
 .square {
-  width: $cell-width + px;
-  height: $cell-width + px;
+  width: $cell-width;
+  height: $cell-width;
   box-sizing: border-box;
   background-color: $cell-default;
   outline: 1px solid $border;
