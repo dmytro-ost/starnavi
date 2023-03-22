@@ -1,6 +1,5 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormGroup } from '@angular/forms';
-import { MODE, Mode } from 'src/app/models/mode.model';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import { Mode } from 'src/app/models/mode.model';
 
 @Component({
   selector: 'app-field-mode-selector',
@@ -13,11 +12,11 @@ export class FieldModeSelectorComponent {
   modes!: Mode[];
 
   @Output()
-  start = new EventEmitter<Mode>();
+  begin = new EventEmitter<Mode>();
 
   selectedMode!: Mode;
 
   onStart() {
-    this.start.emit(this.selectedMode);
+    this.begin.emit(this.selectedMode);
   }
 }

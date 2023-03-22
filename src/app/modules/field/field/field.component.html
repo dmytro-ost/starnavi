@@ -2,7 +2,7 @@
   <div class="col">
     <app-field-mode-selector
       [modes]="(modes$ | async) || []"
-      (start)="onStart($event)">
+      (begin)="onStart($event)">
     </app-field-mode-selector>
     <div class="field" (mouseover)="onMouseOver($event)">
       <div class="square"
